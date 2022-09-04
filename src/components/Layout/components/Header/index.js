@@ -1,5 +1,5 @@
 import styles from './Header.module.scss';
-
+import Button from '~/components/Button';
 import 'tippy.js/dist/tippy.css'; // optional
 import Tippy from '@tippyjs/react/headless';
 import clsx from 'clsx';
@@ -51,7 +51,11 @@ function Header() {
                     </div>
                 </Tippy>
 
-                <div className={clsx(styles.actions)}></div>
+                <div className={clsx(styles.actions)}>
+                    <Button text  outline >Upload</Button>
+                    <Button primary disabled onClick={()=> alert('clicked!')}>Log in</Button>
+                    
+                </div>
             </div>
         </header>
     );
