@@ -14,6 +14,7 @@
     height: 100%;
     width: var(--default-layout-width);
     display: flex;
+    padding: 0px var(--default-horizontal-spacer)px;
     align-items: center;
     justify-content: space-between;
 }
@@ -91,4 +92,5 @@
     margin-left: 28px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
 }
