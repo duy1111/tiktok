@@ -87,10 +87,29 @@
         background: rgba(22, 24, 35, 0.06);
     }
 }
+//actions
+.actions{
+    display: flex;
+    align-items: center;
+}
 .more-btn {
     font-size: 2rem;
     margin-left: 28px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
+}
+.action-btn{
+    font-size: 2.2rem;
+    background-color: transparent;
+    color: rgba(22, 24, 35, 1.0);
+    padding: 4px 16px;
+}
+.user-avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 12px;
     cursor: pointer;
 }
