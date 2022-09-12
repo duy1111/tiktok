@@ -47,9 +47,21 @@
     right: calc(var(--search-bottom-width) + 16px);
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(22, 24, 35, 0.34);
+    background-color:transparent;
+    
 }
+.loading{
+    animation: spinner 1s linear infinite;
+}
+@keyframes spinner {
+    from{
+        transform: translateY(-50%)rotate(0);
+    }
+    to{
+        transform: translateY(-50%)rotate(360deg);
 
+    }
+}
 .search-btn {
     display: flex;
     align-items: center;
