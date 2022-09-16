@@ -3,6 +3,7 @@ import Button from '~/components/Button';
 import 'tippy.js/dist/tippy.css'; // optional
 import Tippy from '@tippyjs/react';
 
+import routesConfig from '~/config/routes'
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '~/components/Image';
@@ -22,6 +23,7 @@ import classNames from 'classnames/bind';
 import Menu from '~/components/Popper/Menu';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { MessageIcon, NotificationIcon, UploadIcon } from '~/components/Icons';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -97,7 +99,9 @@ function Header() {
         <header className={clsx(styles.wrapper)}>
             <div className={clsx(styles.inner)}>
                 <div className={clsx(styles.logo)}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                        <img src={images.logo} alt="Tiktok" />
+                    </Link>
                 </div>
 
                 <Search />
