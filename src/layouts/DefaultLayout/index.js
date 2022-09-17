@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Sidebar from "./Sidebar";
 import styles from "./DefaultLayout.module.scss"
 import clsx from "clsx";
+import PropTypes from 'prop-types'
 function DefaultLayout({ children}) {
     return ( 
         <div className={clsx(styles.wrapper)}> 
@@ -15,5 +16,7 @@ function DefaultLayout({ children}) {
         </div>
      );
 }
-
+DefaultLayout.prototype = {
+    children: PropTypes.node.isRequired,
+}
 export default DefaultLayout;
