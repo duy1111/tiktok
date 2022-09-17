@@ -3,11 +3,16 @@
     --search-height: 46px;
     --search-top-spacer: 9px;
     --search-bottom-width: 52px;
-    height: var(--default-layout-header-height, 60px);
+    height: var(--default-layout-header-height);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    background-color: var(--white);
     display: flex;
     justify-content: center;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: 0;
 }
 
 .inner {
@@ -20,7 +25,7 @@
 }
 .logo {
 }
-.logo-link{
+.logo-link {
     display: flex;
 }
 //actions
