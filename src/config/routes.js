@@ -1,9 +1,9 @@
-const  routes = {
+const routes = {
     home: '/',
-    following:'/following',
-    Profile:'/@:nickname',
-    upload:'/upload',
-    search:'/search',
+    following: '/following',
+    profile: '/@:nickname',
+    upload: '/upload',
+    search: '/search',
 };
 
 export default routes;
