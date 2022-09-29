@@ -2,10 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
-
+import PropTypes from 'prop-types'
 import classNames from 'classnames/bind';
 import styles from './SuggestedAccounts.module.scss';
-
+import Image from '../Image';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountPreview from './AccountPreview';
 const cx = classNames.bind(styles);
@@ -24,7 +24,7 @@ function AccountItem({ data }) {
         <div>
             <Tippy interactive delay={[800, 0]} placement="bottom" render={renderPreview} offset={[-20, 0]}>
                 <div className={cx('account-item')}>
-                    <img className={cx('avatar')} loading="lazy" src={data.avatar} alt={data.nickname}></img>
+                    <Image className={cx('avatar')} loading="lazy" src={data.avatar} alt={data.nickname}></Image>
                     <div className={cx('item-info')}>
                         <p className={cx('nickname')}>
                             <strong>{data.nickname}</strong>
@@ -37,5 +37,7 @@ function AccountItem({ data }) {
         </div>
     );
 }
-
+AccountItem.propTypes = {
+    data:PropTypes.object.isRequired,
+}
 export default AccountItem;
